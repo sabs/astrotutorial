@@ -1,5 +1,8 @@
 ---
 const pageTitle = 'Blog';
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -11,12 +14,8 @@ const pageTitle = 'Blog';
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<header>
-			<a href="/">Home</a>
-			<a href="/blog">Blog</a>
-			<a href="/about">About</a>
-		</header>
-		<h1>Blog</h1>
+		<Navigation />
+		<h1>{pageTitle}</h1>
 		<p>I figure the next step is going to be adding a few blog posts to this page.</p>
 		<p>That or getting some basic styling in place.</p>
 		<p>Update: yep, adding a blog post. Next probably automating a few of these links.</p>
@@ -25,5 +24,6 @@ const pageTitle = 'Blog';
 			<li><a href="/posts/post-2/">Post 2</a></li>
 			<li><a href="/posts/post-3/">Post 3</a></li>
 		  </ul>
+		<Footer />
 	</body>
 </html>
