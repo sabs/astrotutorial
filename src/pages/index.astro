@@ -1,26 +1,15 @@
 ---
-const pageTitle = 'Home';
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>{pageTitle}</h1>
-		<ul>
-			<li>test</li>
-			<li>test2</li>
-			<li>test3</li>
-		</ul>
-	<Footer />
-	</body>
-</html>
+<BaseLayout {pageTitle}>
+	<h2>Look it's a layout</h2>
+	<ul>
+		<li>test</li>
+		<li>test2</li>
+		<li>test3</li>
+	</ul>
+</BaseLayout>
+
+

@@ -1,0 +1,11 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author} on {frontmatter.pubDate.toString().slice(0,10)}</p>
+{frontmatter.image && <img src={frontmatter.image.url} alt={frontmatter.image.alt} height="500" width="500" />}
+<slot />
+<h3>Tags</h3>
+<!-- {frontmatter.tags.map((tag) => {"<a class='tag' href='/blog/tags/'>"{tag}</li>})} -->
+{frontmatter.tags.map((tag) => <a class="tag" href={"../tag/" + tag}>{tag}</a>)}

@@ -1,5 +1,5 @@
 ---
-const pageTitle = "About Me";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const identity = {
 	firstName: "Sarah",
@@ -18,19 +18,11 @@ const skillColor = "#878977";
 const fontWeight = "bold";
 const textCase = "uppercase";
 
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+const pageTitle="About Not Me";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{ skillColor, fontWeight, textCase }}>
+
+		<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
 			h1 {
 				color: purple;
 				font-size: 4rem;
@@ -41,10 +33,7 @@ import Footer from '../components/Footer.astro';
 				text-transform: var(--textCase);
 			}
 		</style>
-	</head>
-	<body>
-		<Navigation />
-		<h1>{pageTitle}</h1>
+<BaseLayout {pageTitle}>
 		<h2>Here are a few facts about a person who isn't me.</h2>
 		<ul>
 			<li>My name is {identity.firstName}.</li>
@@ -76,6 +65,4 @@ import Footer from '../components/Footer.astro';
 				<p>My goal is to finish in some unknown time period.</p>
 			)
 		}
-		<Footer />
-	</body>
-</html>
+</BaseLayout>

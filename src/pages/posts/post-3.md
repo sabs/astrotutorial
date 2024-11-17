@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: A Third Blog Post
 author: Astro Learner
 description: "time to become an astronaut!"
@@ -8,7 +9,7 @@ image:
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-# My Third Blog Post
+# 
 
 Published on: 2022-07-01
 
