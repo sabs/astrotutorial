@@ -1,6 +1,8 @@
 ---
+import BlogPost from "../components/BlogPost.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Blog";
+const allPosts = await Astro.glob('./posts/*.md');
 ---
 
 <BaseLayout {pageTitle}>
@@ -10,12 +12,10 @@ const pageTitle = "Blog";
 	</p>
 	<p>That or getting some basic styling in place.</p>
 	<p>
-		Update: yep, adding a blog post. Next probably automating a few of these
-		links.
+		Now automating these links!
 	</p>
 	<ul>
-		<li><a href="/posts/post-1/">Post 1</a></li>
-		<li><a href="/posts/post-2/">Post 2</a></li>
-		<li><a href="/posts/post-3/">Post 3</a></li>
+	<!-- {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)} -->
+	{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 	</ul>
 </BaseLayout>

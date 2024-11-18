@@ -9,8 +9,5 @@ image:
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-# 
-
-Published on: 2022-07-01
 
 After some consideration, I've realised that web development is not for me and that I should set my sights on a higher goal: space. Time to go off and become an astronaut!
